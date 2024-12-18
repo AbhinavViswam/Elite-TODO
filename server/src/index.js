@@ -19,5 +19,3 @@ app.use("/api/todos",router)
 app.listen(process.env.PORT || 5000,() =>{
     console.log(`Server is now running on port ${process.env.PORT}`);
 })
-
-  
