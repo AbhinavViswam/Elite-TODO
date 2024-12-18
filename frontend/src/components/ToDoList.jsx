@@ -34,7 +34,7 @@ const ToDoList = () => {
 
   useEffect(() => {
     // Fetch to-do items from the backend
-    axios.get('http://localhost:5000/api/todos')
+    axios.get('/api/todos')
       .then(response => setTodos(response.data))
       .catch(error => console.error(error));
   }, []);

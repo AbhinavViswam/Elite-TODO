@@ -49,7 +49,7 @@ const AddToDoForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:5000/api/todos', { title, description })
+    axios.post('/api/todos', { title, description })
       .then(() => {
         setTitle('');
         setDescription('');

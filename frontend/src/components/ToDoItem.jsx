@@ -44,7 +44,7 @@ const ToDoItem = ({ todo }) => {
   const [completed, setCompleted] = useState(todo.completed);
 
   const handleUpdate = () => {
-    axios.put(`http://localhost:5000/api/todos/${todo._id}`, {
+    axios.put(`/api/todos/${todo._id}`, {
       completed: !completed,
     })
     .then((response) => setCompleted(response.data.completed))
@@ -52,7 +52,7 @@ const ToDoItem = ({ todo }) => {
   };
 
   const handleDelete = () => {
-    axios.delete(`http://localhost:5000/api/todos/${todo._id}`)
+    axios.delete(`/api/todos/${todo._id}`)
       .then(() => window.location.reload())
       .catch(error => console.error(error));
   };
